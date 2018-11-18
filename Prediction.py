@@ -9,7 +9,7 @@ CATEGORIES = ['apple_pie', 'beignets', 'bibimbap', 'breakfast_burrito',
               'paella', 'strawberry_shortcake', 'ramen', 'red_velvet_cake', 'samosa',
               'cannoli', 'ceviche', 'baby_back_ribs']
 
-img = 'C:/Users/Lara/workspaceF18/ImageRecognition/redVelvet.png'
+img = 'redVelvet.png'
 IMG_SIZE = 50
 
 
