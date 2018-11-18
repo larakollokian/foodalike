@@ -5,6 +5,13 @@ import pickle
 import base64
 import cv2
 
+CATEGORIES = ['apple_pie', 'beignets', 'bibimbap', 'breakfast_burrito',
+              'cheese_plate', 'chicken_wings', 'creme_brulee', 'deviled_eggs',
+              'dumplings', 'lobster_bisque', 'croque_madame', 'shrimp_and_grits',
+              'guacamole', 'tuna_tartare', 'peking_duck', 'macarons',
+              'paella', 'strawberry_shortcake', 'ramen', 'red_velvet_cake', 'samosa',
+              'cannoli', 'ceviche', 'baby_back_ribs']
+
 # model = tf.keras.models.load_model("food_prediction.model")
 model = pickle.load(open("food_classifier.pickle", "rb"))
 IMG_SIZE = 50
@@ -32,15 +39,11 @@ def make_predict():
     # predict_request = np.array[predict_request]
 
     prediction = model.predict([prepare(predict_request)])  # REMEMBER YOU'RE PASSING A LIST OF THINGS YOU WISH TO PREDICT
-
-
-
-    # y_hat = model(predict_request)
-    output = [y_hat[0]]
-
-    return jsonify(results=output)
+    max_val = np.argmax(prediction)
+    answer = CATEGORIES[max_val]
+    return jsonify(results=answer)
 
 
 if __name__ == '__main__':
-    app.run("https://foodalike4.herokuapp.com/")
-    # app.run(port=9000, debug=True)
+    # app.run("https://foodalike4.herokuapp.com/")
+    app.run(port=9000, debug=True)

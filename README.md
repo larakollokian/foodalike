@@ -20,4 +20,4 @@ We chose 24 categories from the [food-101 dataset](http://www.vision.ee.ethz.ch/
 
 ### what's next
 
-We made an improved model and we want to train it on a more powerful computer to get better predictions. We also want to successfully connect the server to the android app
+We made an improved model and we want to train it on a more powerful computer to get better predictions. We also want to successfully connect the server to the android app. Our backend currently only runs locally :(
