@@ -3,7 +3,7 @@
 have u ever been called a lobster bisque? do boys dm u about ur baby back ribs? find out what scrumptious food u r!!!
 
 [check out our devpost](https://devpost.com/software/f-o-o-d-a-l-i-k-e)   
-[our android frontend]()
+[our android frontend](https://github.com/marievu/Foodalike4)
 
 ### what it is
 
